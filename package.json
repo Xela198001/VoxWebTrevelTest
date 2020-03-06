@@ -1,13 +1,13 @@
 {
-  "name": "grid-block2",
+  "name": "test",
   "version": "1.0.0",
-  "description": "",
+  "description": "VoxWeb Test",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve"
   },
-  "author": "",
+  "author": "Alexander Meshcheriakov",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.2.2",
