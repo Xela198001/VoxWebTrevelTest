@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Work Sans;
+}
+
+.contaner {
+    margin: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.singup {
+    /* Signup */
+
+
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background: #F4F5FC;
+
+}
+
+/* Group */
+
+.group13 {
+    position: absolute;
+    width: 665px;
+    height: 481px;
+    left: 68px;
+    top: 60px;
+}
+
+.mask-left {
+    position: absolute;
+    left: 0%;
+    right: 79.37%;
+    top: 0.1%;
+    bottom: 0.11%;
+
+    background: #5A61ED;
+}
+
+.mask-right {
+    position: absolute;
+    left: 20.63%;
+    right: 0%;
+    top: 0.1%;
+    bottom: 0.11%;
+
+    background: #FFFFFF;
+}
+
+.sing-up {
+    position: absolute;
+    display: flex;
+    height: 63px;
+    left: 70%;
+    right: 65.34%;
+    top: calc(50% - 130px/2 + 249.5px);
+
+    font-family: PT Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 49px;
+    line-height: 63px;
+    letter-spacing: 0.5px;
+
+    color: #FFFFFF;
+
+    transform: rotate(-90deg);
+}
+
+.form-sing-up {
+    //     position: absolute;
+    // left: 23.76%;
+    // right: 3.31%;
+    // top: 8.11%;
+    // bottom: 6.86%;
+}
+
+h2 {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    /* identical to box height */
+
+    letter-spacing: -0.46px;
+
+    color: #111111;
+}
+
+fieldset {
+    border: none;
+}
+
+.form {
+    width: 95%;
+    display: flex;
+    flex-grow: 2;
+    flex-flow: row wrap;
+    align-items: space-around;
+    justify-content: space-around;
+    margin-top: 38.52px;
+    margin-left: 20.6px;
+}
+
+.head {
+    width: 100%;
+
+}
+
+.form>div {
+    width: 49.5%;
+
+}
+
+.form>div>input,
+.form>div>select {
+    width: 98%;
+    margin: 5px 0;
+}
+
+.form>label,
+.form>div>label, .form>div>div>label {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7c7c7c;
+}
+
+.form input,
+select {
+    height: 24px;
+    border: none;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #111111;
+}
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"] {
+    display:inline-block;
+    border: 0.7px solid #5A61ED;
+    box-sizing: border-box;
+    border-radius: 6.3px;
+    font-size: 14px;
+    line-height: 16px;
+    height: 12px;
+}
+
+.gender {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+.gender-radio {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+}
+.gender-radio > input {
+    margin-right: 5px;
+}
+.gender-radio > span {
+    margin-right: 10px;
+    margin-top: -4px;
+    font-weight: normal;
+}
+.button {
+    position: absolute;
+    left: 58.2%;
+    right: -11.28%;
+    top: 32.22%;
+    bottom: -5.61%;
+}
+
+// .btn {
+//     margin: 187px 46px 10px 47px;
+
+
+// }
+
+.btn-singup {
+    //margin: 261px 97px 102px 60px;
+    height: 32px;
+    width: 154px;
+    background-color: #5A61ED;
+    border: 0.5px solid #FFFFFF;
+}
+
+.btn-singup .submit {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.sing-up-footer {
+    height: 0%;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: flex-end;
+
+}
+
+.sing-up-footer .login {
+    order: -1;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0 0 0 20px;
+}
+
+.sing-up-footer>div {
+    margin-top: 20%;
+    width: 46%;
+}
+
+.sing-up-footer .btn {
+    text-align: end;
+}
