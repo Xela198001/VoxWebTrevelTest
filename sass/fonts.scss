@@ -1,8 +1,47 @@
 @font-face {
   font-family: 'Museo';
-  src: url('/fonts/MuseoSansCyrl.otf') format('opentype'),
-  url('/fonts/MuseoSansCyrl.otf') format('opentype');
-  font-weight: normal;
+  src:  url('/fonts/MuseoSansCyrl.otf');
+  src:  url('/fonts/MuseoSansCyrl.otf#iefix') format('opentype');
+  font-weight: 100;
   font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src:  url('/fonts/MuseoSansCyrl_3.otf');
+  src:  url('/fonts/MuseoSansCyrl_3.otf#iefix') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src:  url('/fonts/MuseoSansCyrl_0.otf');
+  src:  url('/fonts/MuseoSansCyrl_0.otf#iefix') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src:  url('/fonts/MuseoSansCyrl_1.otf');
+  src:  url('/fonts/MuseoSansCyrl_1.otf#iefix') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo';
+  src:  url('/fonts/MuseoSansCyrl_2.otf');
+  src:  url('/fonts/MuseoSansCyrl_2.otf#iefix') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v50/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
 }
 

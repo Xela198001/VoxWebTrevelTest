@@ -1,10 +1,10 @@
 @mixin clearfix() {
-  &:before,
-  &:after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+  // &:before,
+  // &:after {
+  //   content: '';
+  //   display: table;
+  //   clear: both;
+  // }
 }
 
 @mixin min-max($min-width, $max-width, $padding) {

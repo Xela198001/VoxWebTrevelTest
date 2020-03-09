@@ -15,9 +15,9 @@ $hamburgerColorActive: #f8c255;
     .hamburger__element {
       background-color: $hamburgerColorActive;
 
-      &::after, &::before {
-        background-color: $hamburgerColorActive;
-      }
+      // &::after, &::before {
+      //   background-color: $hamburgerColorActive;
+      // }
 
     }
 
@@ -38,24 +38,24 @@ $hamburgerColorActive: #f8c255;
   transition-property: background-color;
   transition-duration: 500ms;
 
-  &::after, &::before {
-    content: '';
-    width: 40px;
-    height: 3px;
-    background-color: $hamburgerColor;
-    display: block;
-    margin: 0 auto;
-    transition-property: background-color;
-    transition-duration: 500ms;
-  }
+  // &::after, &::before {
+  //   content: '';
+  //   width: 40px;
+  //   height: 3px;
+  //   background-color: $hamburgerColor;
+  //   display: block;
+  //   margin: 0 auto;
+  //   transition-property: background-color;
+  //   transition-duration: 500ms;
+  // }
 
-  &::after {
-    transform: translateY(4px);
-  }
+  // &::after {
+  //   transform: translateY(4px);
+  // }
 
-  &::before {
-    transform: translateY(-7px);
-  }
+  // &::before {
+  //   transform: translateY(-7px);
+  // }
 
 }
 
@@ -64,17 +64,17 @@ $hamburgerColorActive: #f8c255;
   z-index: 1;
   border-color: $hamburgerColorActive;
 
-  &:hover, &:active {
-    border-color: $hamburgerColorActive;
+  // &:hover, &:active {
+  //   border-color: $hamburgerColorActive;
 
-    .hamburger__element {
-      background-color: $hamburgerColor;
+  //   .hamburger__element {
+  //     background-color: $hamburgerColor;
 
-      &::after, &::before {
-        background-color: $hamburgerColor;
-      }
+  //     &::after, &::before {
+  //       background-color: $hamburgerColor;
+  //     }
 
-    }
+  //   }
 
   }
 

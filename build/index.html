@@ -4,11 +4,246 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/build/css/style.min.css">
     <link rel="stylesheet" href="/css/style.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>Document</title>
 </head>
 
-<body>
-    <h1 style="font-size: 36px; line-height: 43px; font-family: MuseoSansCyrl sans-serif;">Зимбабве</h1>
+<body onload="dop()">
+    <div class="wrapper">
+        <div class="contaner">
+            <div class="header">
+                <div id="app">
+                    <nav>
+                        <transition name="fade" mode="out-in">
+                            <i class="material-icons menu" v-if="!show" @click="show = !show" key="menu">menu</i>
+                            <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
+                        </transition>
+                        <transition name="fade">
+                            <div class="pickup" v-if="show">
+                                <country></country>
+                                <type></type>
+                            <ul >
+                                
+                                <!-- <div id="select_country">
+                                    <select v-model="selectedcountry">
+                                        <option v-for="country in country" v-bind:value="country">{{country}}</option>
+                                    </select>
+                                </div> -->
+                                <li v-for="item in items" id="nav_li" ><a v-bind:href="item.link">{{ item.text }}</a></li>
+                            </ul>
+                            </div>
+                        </transition>
+                        <!-- <img src="https://img.icons8.com/android/50/000000/menu.png"> -->
+                    </nav>
+                </div>
+            </div>
+            <h1 class="h1">Зимбабве</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-img">
+                        <div class="img-wrapper">
+                            <img src="/img/687_anons-min_480_275_5_90.png" alt="" srcset="">
+                        </div>
+                        <div class="price">
+                            <p> от 118 112 р</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4>Италия</h4>
+                        <h2>Под небом Тосканы</h2>
+                        <p>Сансеполькро — (Перуджа) — Ассизи — Губбио — (Сиена) — Ла Верна — Ангиари — Монтерки — Ареццо
+                            — Кортона — (Пиенца) - (Монтепульчано)</p>
+                        <div class="day">8 дней / 7 ночей Русский язык</div>
+                        <div class="date"> 27.04.19 - 04.05.19и еще 15 дат</div>
+                        <div class="avia">Авиаперелет включен!</div>
+
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="card-img">
+                        <div class="img-wrapper">
+                            <img src="/img/430_anons_480_275_5_90.png" alt="" srcset="">
+                        </div>
+                        <div class="price">
+                            <p>145 715 р</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h4>ИСЛАНДИЯ</h4>
+                            <h2>Майские каникулы в Исландии</h2>
+                            <p>Рейкьявик — Тингвеллир — Гюдльфосс — Скафтафедль — Сельяландсфосс — Скоугафосс —
+                                Йёкюльсаурлоун — Голубая Лагуна — Снайфельсйёкутль — Arnarstapi — Рейкьявик</p>
+                            <div class="day">8 дней / 7 ночей Русский язык</div>
+                            <div class="date"> 27.04.19 - 04.05.19</div>
+                            <div class="avia"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img">
+                        <div class="wrapper">
+                            <img src="/img/640anons_480_275_5_90.png" alt="" srcset="">
+                        </div>
+                        <div class="price">
+                            <p>37 302 р</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-body">
+                            <h4>ТУРЦИЯ</h4>
+                            <h2>Открытие Турции</h2>
+                            <p>Стамбул — Анкара — Каппадокия — Конья — Памуккале — Эфес — Кушадасы — Пергам — Ассос —
+                                Троя — Стамбул</p>
+                            <div class="day">8 дней / 7 ночей Русский язык</div>
+                            <div class="date">28.04.19 - 05.05.19и еще 3 даты</div>
+                            <div class="avia" id="avia"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-2">
+                    <div class="card-img">
+                        <div class="wrapper">
+                            <img src="/img/117_anons-min_480_275_5_90.png" alt="" srcset="">
+                        </div>
+                        <div class="price">
+                            <p>145 000 р</p>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h4>НОРВЕГИЯ, ШПИЦБЕРГЕН</h4>
+                        <h2>От Свальбарда до Груманта</h2>
+                        <p></p>
+                        <div class="day">8 дней / 7 ночей Русский язык</div>
+                        <div class="date">27.04.19 - 04.05.19и еще 15 дат</div>
+                        <div class="avia">Гарантированный тур!</div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="bid">
+                <h1>Заявка на подбор путешествия</h1>
+
+                <form action="" method="post">
+                    <div class="about-you">
+                        <div class="label">
+                            <p>НЕМНОГО О ВАС</p>
+                        </div>
+
+                        <div><label>Имя*</label><br>
+                            <input type="text" id="name">
+                        </div>
+                        <div><label>Телефон*</label><br>
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+                    <div class="about-travel">
+                        <div class="label">
+                            <p>О ПУТЕШЕСТВИИ</p>
+                        </div>
+
+                        <div><label>КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ? *</label><br>
+                            <input type="text" id="country">
+                        </div>
+
+                        <div><label>КОГДА?</label><br>
+                            <input type="text" id="date">
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <div class="preferred_method">
+                            <div class="label">
+                                <p>УДОБНЫЙ СПОСОБ СВЯЗИ</p>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="checkbox_1" id="checkbox_1" class="checkbox_input" value="viber" >
+                                <label for="checkbox_1" class="checkbox_label"><b>VIBER</b></label>
+                            </div>
+                            <div  class="checkbox">
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="preferred_method_of_communication_2" class="checkbox_input_2" value="whatsapp">
+                                   
+                                <label for="preferred_method_of_communication_2" class="checkbox_label_2">WHATSAPP</label><br>
+                                 
+                            </div>
+                            <div  class="checkbox">
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="preferred_method_of_communication_3" class="checkbox_input_3" value="mail">
+                                    
+                                <label for="preferred_method_of_communication_3" class="checkbox_label_3">MAIL</label><br>
+                                
+                                </label>
+                            </div>
+                            <div  class="checkbox">
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="preferred_method_of_communication_4" class="checkbox_input_4" value="phone">
+                                <label for="preferred_method_of_communication_4" class="checkbox_label_4">PHONE</label><br>
+                                
+                            </div>
+                        </div>
+
+                        <div class="preferred_method">
+                            <div class="label">
+                                <p>ОТКУДА УЗНАЛИ О НАС</p>
+                            </div>
+                            <div class="checkbox">
+                
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="checkbox_5" value="Интернет">
+                                    <label for="checkbox_5" class="checkbox_label_5">ИНТЕРНЕТ</label>
+                            </div>
+                            <div class="checkbox">
+                                
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="checkbox_6" value="РЕКОМЕНДОВАЛИ ДРУЗЬЯ">
+                                    <label for="checkbox_6" class="checkbox_label_6">РЕКОМЕНДОВАЛИ ДРУЗЬЯ</label>
+                            </div>
+                            <div class="checkbox">
+                                
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="checkbox_7" value="Соц. сети"> 
+                                    <label for="checkbox_7" class="checkbox_label_7">СОЦ. СЕТИ</label>              
+                            </div>
+                            <div class="checkbox">
+                                
+                                <input type="checkbox" name="preferred_method_of_communication"
+                                    id="checkbox_8" value="Уже ездил">
+                                    <label for="checkbox_8" class="checkbox_label_8">УЖЕ ЕЗДИЛ</label>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-footer">
+                        <div class="checkbox">
+                            <input type="checkbox" name="email" id="email" value="email">
+                            <label for="email"><b>Получать свежие предложения по электронной почте</b></label>
+                            <p>Каждую неделю мы делаем для вас обзор лучших экспедиций, статей и лайфхаков для
+                                путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
+                            </p>
+                        </div>
+                        <div class="checkbox">
+                            <input type="checkbox" name="" id="1" value="1">
+                            <label for="1"><b>С обработкой своих персональных данных согласен. *</b></label><br>
+                            <p> Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
+                        </div>
+                        <div>
+                            <p>* Поля, которые надо обязательно заполнить</p>
+                        </div>
+                        <div class="btn"><input type="submit" class="btn-submit" value="Отправить"></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/js/all.min.js"></script>
+</body>
+
+
 
 </html>
