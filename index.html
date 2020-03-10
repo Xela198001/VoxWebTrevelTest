@@ -125,19 +125,22 @@
                 </div>
             </div>
             <div class="bid">
+                <div class="hr">&nbsp;</div>
                 <h1>Заявка на подбор путешествия</h1>
 
-                <form action="" method="post">
+                <form action="" id="form" onsubmit="return Validate();">
                     <div class="about-you">
                         <div class="label">
                             <p>НЕМНОГО О ВАС</p>
                         </div>
 
-                        <div><label>Имя*</label><br>
-                            <input type="text" id="name">
+                        <div><label for="name">Имя&nbsp;<span class="field">*</span></label><br>
+                            <input type="text" id="name" onchange="Validate()"><br>
+                            <span class="error_input" id='name_error'></span><br />
                         </div>
-                        <div><label>Телефон*</label><br>
-                            <input type="text" id="phone">
+                        <div><label for="phone">Телефон&nbsp;<span class="field">*</span></label><br>
+                            <input type="text" id="phone" name="phone"><br/>
+                            <span class="error_input" id='phone_error'></span><br />
                         </div>
                     </div>
                     <div class="about-travel">
@@ -145,8 +148,9 @@
                             <p>О ПУТЕШЕСТВИИ</p>
                         </div>
 
-                        <div><label>КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ? *</label><br>
-                            <input type="text" id="country">
+                        <div><label>КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?&nbsp;<span class="field">*</span></label><br>
+                            <input type="text" id="country"><br/>
+                            <span class="error_input" id='country_error'></span><br />
                         </div>
 
                         <div><label>КОГДА?</label><br>
@@ -227,13 +231,13 @@
                                 путешественников. Если вдруг вам не понравится, вы сможете отписаться в любой момент.
                             </p>
                         </div>
-                        <div class="checkbox">
-                            <input type="checkbox" name="" id="1" value="1">
-                            <label for="1"><b>С обработкой своих персональных данных согласен. *</b></label><br>
+                        <div class="checkbox personal_data">
+                            <input type="checkbox" name="personal_data" id="personal_data">
+                            <label for="personal_data" id="personal_data_label" ><b>С обработкой своих персональных данных согласен. &nbsp;<span class="field">*</span></b></label><br>
                             <p> Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
                         </div>
                         <div>
-                            <p>* Поля, которые надо обязательно заполнить</p>
+                            <p><span class="field">*</span> &nbsp;Поля, которые надо обязательно заполнить</p>
                         </div>
                         <div class="btn"><input type="submit" class="btn-submit" value="Отправить"></div>
                     </div>

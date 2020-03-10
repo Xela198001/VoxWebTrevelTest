@@ -12,14 +12,59 @@ function dop() {
         if (x[i].innerHTML == "") {
             x[i].style.display = "none";
         }
-        console.log(x[i].innerHTML);
 
     }
 };
 
 function onclick_li(str) {
     var x = document.querySelector("li > a").href;
-    console.log(str);
+}
+
+function Validate() {
+    var name = document.querySelector(" input#name");
+    var phone = document.querySelector(" input#phone");
+    var centry = document.querySelector(" input#phone");
+    var personal_data = document.querySelector("input#personal_data");
+
+    if (name.value !== '') {
+        document.querySelector('#name_error').innerHTML = '';
+        name.style.border = '1px solid #E7E7E7'
+    }
+    if (phone.value !== '') {
+        document.querySelector('#phone_error').innerHTML = '';
+        phone.style.border = '1px solid #E7E7E7'
+    }
+
+    if (country.value !== '') {
+        document.querySelector('#country_error').innerHTML = '';
+        country.style.border = '1px solid #E7E7E7'
+    }
+
+    if (name.value == '' || phone.value == '' || country.value == '' || personal_data.checked == false) {
+        if (phone.value == '') {
+            phone.style.border = '1px solid #CB0037'
+            document.querySelector('#phone_error').innerHTML = 'Укажите телефон';
+        }
+
+        if (name.value == '') {
+            name.style.border = '1px solid #CB0037'
+            document.querySelector('#name_error').innerHTML = 'Укажите имя';
+        }
+
+        if (country.value == '') {
+            country.style.border = '1px solid #CB0037'
+            document.querySelector('#country_error').innerHTML = 'Укажите континент, страну или город';
+        }
+
+        if (personal_data.checked = false) {
+            b ='<span>' + b + '</span>'; 
+        }
+        
+
+        return false;
+    } else {
+        return true;
+    };
 }
 
 var app = new Vue({
@@ -71,13 +116,3 @@ Vue.component('type', {
         };
     }
 });
-// var sel = new Vue({
-//     el: '#app > #select_country',
-//     data: {
-//         country:[
-//             'Russia',
-//             'USA'
-//         ],
-//         selectedcountry:null
-//     }
-// });

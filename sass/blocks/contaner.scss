@@ -1,3 +1,5 @@
+$input_border_color: #E7E7E7;
+
 // div {
 //     border: solid 1px #000;
 // }
@@ -156,10 +158,25 @@ p {
 }
 
 .bid {
+    .hr {
+        display: none;
+    }
+
     h1 {
         text-align: center;
         margin: 67px 0 70px 0;
         text-align: center;
+
+    }
+
+    .error_input {
+        color: #CB0037;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 12px;
+        margin-top: 9px;
+        display: inline-block;
 
     }
 
@@ -168,7 +185,7 @@ p {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
 
         .label {
             order: -1;
@@ -217,11 +234,14 @@ p {
     input[type=text] {
         width: 380px;
         height: 50px;
-        border: 1px solid #E7E7E7;
+        border: 1px solid $input_border_color;
         box-sizing: border-box;
         border-radius: 3px;
     }
 
+    .field {
+        color: #CB0037;
+    }
 
     div {
         position: relative;
@@ -259,6 +279,7 @@ p {
             label {
                 padding-left: 22px;
             }
+
             input[type=checkbox] {
                 position: absolute;
                 top: 0;
@@ -351,11 +372,6 @@ p {
             input[type="checkbox"]:checked+label::after {
                 content: "";
 
-                /*Добавляем фокус к внешнему блоку поддельного чекбокса*/
-                input[type="checkbox"]:focus+label::before {
-                    outline: rgb(59, 153, 252) auto 5px;
-                }
-
             }
         }
 
@@ -402,12 +418,6 @@ p {
                 opacity: 0;
             }
 
-
-
-            input {
-                opacity: 0;
-            }
-
             label {
                 position: absolute;
                 top: 0;
@@ -430,7 +440,6 @@ p {
                     line-height: 12px;
                 }
             }
-
 
             label::before,
             label::after {
@@ -478,11 +487,6 @@ p {
 
             input[type="checkbox"]:checked+label::after {
                 content: "";
-
-                /*Добавляем фокус к внешнему блоку поддельного чекбокса*/
-                input[type="checkbox"]:focus+label::before {
-                    outline: rgb(59, 153, 252) auto 5px;
-                }
 
             }
         }
@@ -558,4 +562,70 @@ p {
 
         }
     }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+
+    .card {
+        width: 100%;
+        padding: 46px 18px 10px 18px;
+        height: 35.75%;
+        background-color: #fff;
+    }
+
+    .card-2 {
+        width: 100%;
+        padding: 46px 18px 10px 18px;
+        background-color: #fff;
+    }
+
+    .bid {
+        .hr {
+            display: block;
+            margin: 33px 18px;
+            width: 340px;
+            height: 2px;
+            background: #C4C4C4;
+
+        }
+
+        h1 {
+            text-align: left;
+            margin: 0 18px;
+
+        }
+
+        .about-you {
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+
+        .about-travel {
+            margin-left: 18px;
+            margin-right: 18px;
+        }
+
+        .check {
+            margin-left: 18px;
+            margin-right: 18px;
+            flex-direction: column;
+
+            .preferred_method {
+                width: 100%;
+            }
+        }
+
+
+        .form-footer {
+            margin-left: 18px;
+            margin-right: 18px;
+
+            .btn {
+                margin-left: 12.56%;
+                margin-right: auto;
+            }
+        }
+    }
+
+
 }
