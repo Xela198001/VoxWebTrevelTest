@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/build/css/style.min.css">
+    <!-- <link rel="stylesheet" href="/build/css/style.min.css"> -->
     <link rel="stylesheet" href="/css/style.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -21,19 +22,39 @@
                             <i class="material-icons clear" v-else @click="show = !show" key="clear">clear</i>
                         </transition>
                         <transition name="fade">
+
                             <div class="pickup" v-if="show">
-                                <country></country>
-                                <type></type>
-                            <ul >
-                                
-                                <!-- <div id="select_country">
+                                <div>
+                                    <form action="" method="post" class="tour"></form>
+                                    <div class="menu-select">
+                                        <country></country>
+                                        <div class="select-calendar">
+                                            <input id="calendar" name="date" value="" type="text" placeholder="Дата" />
+                                        </div>
+                                        <type></type>
+                                    </div>
+                                </div>
+                                <div class="menu">
+                                    <ul>
+
+                                        <!-- <div id="select_country">
                                     <select v-model="selectedcountry">
                                         <option v-for="country in country" v-bind:value="country">{{country}}</option>
                                     </select>
                                 </div> -->
-                                <li v-for="item in items" id="nav_li" ><a v-bind:href="item.link">{{ item.text }}</a></li>
-                            </ul>
+                                        <li v-for="item in items" id="nav_li"><a
+                                                v-bind:href="item.link">{{ item.text }}</a></li>
+                                    </ul>
+                                </div>
+                                <div class="company-phone">
+                                    +7 (495) 123-45-67
+                                </div>
+                                <div class="button-tour">
+                                    <input type="submit" id="button-tour" value="ПОДБЕРИТЕ МНЕ ТУР"></form>
+                                </div>
+
                             </div>
+
                         </transition>
                         <!-- <img src="https://img.icons8.com/android/50/000000/menu.png"> -->
                     </nav>
@@ -139,7 +160,7 @@
                             <span class="error_input" id='name_error'></span><br />
                         </div>
                         <div><label for="phone">Телефон&nbsp;<span class="field">*</span></label><br>
-                            <input type="text" id="phone" name="phone"><br/>
+                            <input type="text" id="phone" name="phone"><br />
                             <span class="error_input" id='phone_error'></span><br />
                         </div>
                     </div>
@@ -149,7 +170,7 @@
                         </div>
 
                         <div><label>КУДА И КОГДА ХОТИТЕ ПОЕХАТЬ?&nbsp;<span class="field">*</span></label><br>
-                            <input type="text" id="country"><br/>
+                            <input type="text" id="country"><br />
                             <span class="error_input" id='country_error'></span><br />
                         </div>
 
@@ -164,29 +185,33 @@
                                 <p>УДОБНЫЙ СПОСОБ СВЯЗИ</p>
                             </div>
                             <div class="checkbox">
-                                <input type="checkbox" name="checkbox_1" id="checkbox_1" class="checkbox_input" value="viber" >
+                                <input type="checkbox" name="checkbox_1" id="checkbox_1" class="checkbox_input"
+                                    value="viber">
                                 <label for="checkbox_1" class="checkbox_label"><b>VIBER</b></label>
                             </div>
-                            <div  class="checkbox">
+                            <div class="checkbox">
                                 <input type="checkbox" name="preferred_method_of_communication"
                                     id="preferred_method_of_communication_2" class="checkbox_input_2" value="whatsapp">
-                                   
-                                <label for="preferred_method_of_communication_2" class="checkbox_label_2">WHATSAPP</label><br>
-                                 
+
+                                <label for="preferred_method_of_communication_2"
+                                    class="checkbox_label_2">WHATSAPP</label><br>
+
                             </div>
-                            <div  class="checkbox">
+                            <div class="checkbox">
                                 <input type="checkbox" name="preferred_method_of_communication"
                                     id="preferred_method_of_communication_3" class="checkbox_input_3" value="mail">
-                                    
-                                <label for="preferred_method_of_communication_3" class="checkbox_label_3">MAIL</label><br>
-                                
+
+                                <label for="preferred_method_of_communication_3"
+                                    class="checkbox_label_3">MAIL</label><br>
+
                                 </label>
                             </div>
-                            <div  class="checkbox">
+                            <div class="checkbox">
                                 <input type="checkbox" name="preferred_method_of_communication"
                                     id="preferred_method_of_communication_4" class="checkbox_input_4" value="phone">
-                                <label for="preferred_method_of_communication_4" class="checkbox_label_4">PHONE</label><br>
-                                
+                                <label for="preferred_method_of_communication_4"
+                                    class="checkbox_label_4">PHONE</label><br>
+
                             </div>
                         </div>
 
@@ -195,28 +220,28 @@
                                 <p>ОТКУДА УЗНАЛИ О НАС</p>
                             </div>
                             <div class="checkbox">
-                
-                                <input type="checkbox" name="preferred_method_of_communication"
-                                    id="checkbox_5" value="Интернет">
-                                    <label for="checkbox_5" class="checkbox_label_5">ИНТЕРНЕТ</label>
+
+                                <input type="checkbox" name="preferred_method_of_communication" id="checkbox_5"
+                                    value="Интернет">
+                                <label for="checkbox_5" class="checkbox_label_5">ИНТЕРНЕТ</label>
                             </div>
                             <div class="checkbox">
-                                
-                                <input type="checkbox" name="preferred_method_of_communication"
-                                    id="checkbox_6" value="РЕКОМЕНДОВАЛИ ДРУЗЬЯ">
-                                    <label for="checkbox_6" class="checkbox_label_6">РЕКОМЕНДОВАЛИ ДРУЗЬЯ</label>
+
+                                <input type="checkbox" name="preferred_method_of_communication" id="checkbox_6"
+                                    value="РЕКОМЕНДОВАЛИ ДРУЗЬЯ">
+                                <label for="checkbox_6" class="checkbox_label_6">РЕКОМЕНДОВАЛИ ДРУЗЬЯ</label>
                             </div>
                             <div class="checkbox">
-                                
-                                <input type="checkbox" name="preferred_method_of_communication"
-                                    id="checkbox_7" value="Соц. сети"> 
-                                    <label for="checkbox_7" class="checkbox_label_7">СОЦ. СЕТИ</label>              
+
+                                <input type="checkbox" name="preferred_method_of_communication" id="checkbox_7"
+                                    value="Соц. сети">
+                                <label for="checkbox_7" class="checkbox_label_7">СОЦ. СЕТИ</label>
                             </div>
                             <div class="checkbox">
-                                
-                                <input type="checkbox" name="preferred_method_of_communication"
-                                    id="checkbox_8" value="Уже ездил">
-                                    <label for="checkbox_8" class="checkbox_label_8">УЖЕ ЕЗДИЛ</label>
+
+                                <input type="checkbox" name="preferred_method_of_communication" id="checkbox_8"
+                                    value="Уже ездил">
+                                <label for="checkbox_8" class="checkbox_label_8">УЖЕ ЕЗДИЛ</label>
                             </div>
                         </div>
 
@@ -233,7 +258,8 @@
                         </div>
                         <div class="checkbox personal_data">
                             <input type="checkbox" name="personal_data" id="personal_data">
-                            <label for="personal_data" id="personal_data_label" ><b>С обработкой своих персональных данных согласен. &nbsp;<span class="field">*</span></b></label><br>
+                            <label for="personal_data" id="personal_data_label"><b>С обработкой своих персональных
+                                    данных согласен. &nbsp;<span class="field">*</span></b></label><br>
                             <p> Отправляя заявку я подтверждаю согласие с условиями Пользовательского соглашения
                         </div>
                         <div>

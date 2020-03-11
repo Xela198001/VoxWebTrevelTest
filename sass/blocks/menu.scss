@@ -1,5 +1,8 @@
 $menuBg: #FFD241;
 
+// div {
+//   border: 1px solid #000;
+// }
 .nav {
   margin: 5px 10px 5px 10px;
   background-color: #000000;
@@ -19,18 +22,28 @@ $menuBg: #FFD241;
   top: 60px;
   right: 0;
   width: 50%;
-  
+  height: 1366px;
   z-index: 999;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  justify-content: center;
 }
 
-ul{
+form.tour {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+}
+
+ul {
   align-self: center;
   width: 100%;
-  margin: 0;
+  //margin: 68px 182px 68px 191px;
   padding: 0;
 }
 
@@ -61,41 +74,198 @@ li:hover {
   background-color: #fdc91f;
 }
 
-.select-css { 
-  display: block; 
- /* Rectangle 2.11 */
+.select-css {
+  display: block;
+  /* Rectangle 2.11 */
 
-// position: absolute;
-width: 150px;
-height: 49px;
-// left: 48px;
-// top: 101px;
-border: none;
-margin: 10px 10px 10px 10px;
-background: #FFFFFF;
-border-radius: 29.5px;
+  // position: absolute;
+  width: 150px;
+  height: 49px;
+  // left: 48px;
+  // top: 101px;
+  border: none;
+  margin: 10px 0px;
+  padding-left: 16px;
+  background: #FFFFFF;
+  border-radius: 29.5px;
 
-  } 
-   .select-css::-ms-expand { display: none; } 
-   .select-css:hover {/* Rectangle 15 */
 
-       
+
+}
+
+.select-type {
+  margin-left: -10px;
+
+  .select-css {
+    display: block;
+    /* Rectangle 2.11 */
+
+    // position: absolute;
+    width: 280px;
+    height: 49px;
+    // left: 48px;
+    // top: 101px;
+    border: none;
+    margin: 10px 0;
     background: #FFFFFF;
     border-radius: 29.5px;
-     } 
-   .select-css:focus { border-color: #aaa; 
-   box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
-   box-shadow: 0 0 0 3px -moz-mac-focusring; 
-  color: #222;
-   outline: none; 
-  } 
-   .select-css option { 
-    display: flex; 
-    font-weight:normal; border: none;
-    margin: 10px 10px 10px 10px;
+  }
+
+
+}
+
+.select-calendar {
+  #calendar {
+    display: block;
+    /* Rectangle 2.11 */
+
+    // position: absolute;
+    width: 120px;
+    height: 49px;
+    // left: 48px;
+    // top: 101px;
+    border: none;
+    margin: 10px 0;
+    padding-left: 16px;
+    color: #000;
     background: #FFFFFF;
-    border-radius: 29.5px; } 
-  //  *[dir="rtl"] .select-css, :root:lang(ar) .select-css, :root:lang(iw) .select-css { 
-  // background-position: left .7em top 50%, 0 0; 
-  // padding: .6em .8em .5em 1.4em; 
-  // }
+    border-radius: 29.5px;
+  }
+}
+
+.select-div-css {}
+
+.select-css::-ms-expand {
+  display: none;
+}
+
+.select-css:hover {
+  /* Rectangle 15 */
+
+
+  background: #FFFFFF;
+  border-radius: 29.5px;
+}
+
+.select-css:focus {
+  border-color: #aaa;
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+
+.select-css option {
+  display: flex;
+  font-weight: normal;
+  border: none;
+  margin: 10px 10px 10px 10px;
+  background: #FFFFFF;
+  border-radius: 29.5px;
+}
+
+.menu-select {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 2;
+
+  div {
+    width: 35%;
+  }
+
+  .select-country {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 5px;
+    margin-left: 120px;
+  }
+
+  .select-calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5px;
+  }
+}
+
+.menu {
+  width: 100%;
+}
+
+.company-phone {
+  margin: 771px 0 12px 0;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.button-tour {
+  margin: 12px 0;
+
+  #button-tour {
+    width: 280px;
+    height: 49px;
+    background-color: $menuBg;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 29.5px;
+    padding: 17px 71px 17px 80;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+
+  .pickup {
+    height: 745px;
+
+    .menu-select {
+      flex-direction: column;
+      align-items: flex-start;
+
+      div {
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      .select-country {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 5px;
+        margin-left: 0;
+
+        .select-css {
+          width: 280px;
+        }
+      }
+
+
+    }
+
+    .company-phone {
+      margin-top: 104px;
+    }
+  }
+
+
+
+  .select-calendar {
+    width: 280px;
+
+    input#calendar {
+      width: 264px;
+
+      div {
+        width: 250px;
+      }
+    }
+  }
+
+
+}

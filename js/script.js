@@ -91,10 +91,11 @@ var app = new Vue({
     },
 });
 Vue.component('country', {
-    template: '<div><select class="select-css"><option v-for = "country in country" v-bind:value = "country" > {{country}} </option></select></div>',
+    template: '<div class="select-country"><select class="select-css"><option v-for = "country in country" v-bind:value = "country" > {{country}} </option></select></div>',
     data() {
         return {
             country: [
+                'Страны',
                 'Russia',
                 'USA'
             ],
@@ -104,7 +105,7 @@ Vue.component('country', {
 });
 
 Vue.component('type', {
-    template: '<div><select><option v-for = "type in type" v-bind:value = "type" > {{type}} </option></select></div>',
+    template: '<div class="select-type"><select class="select-css"><option v-for = "type in type" v-bind:value = "type" > {{type}} </option></select></div>',
     data() {
         return {
             type: [
@@ -112,7 +113,20 @@ Vue.component('type', {
                 'Активный',
                 'На авто'
             ],
-            selectedcountry: null
+            selectedtype: null
         };
     }
 });
+
+// $(function(){
+//     $('#date').daterangepicker({
+//      singleDatePicker: true,
+//     });
+//    });
+// jQuery(function() {
+//     jQuery('input[name="daterange"]').daterangepicker({
+//       opens: 'left'
+//     }, function(start, end, label) {
+//       console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+//     });
+//   });
